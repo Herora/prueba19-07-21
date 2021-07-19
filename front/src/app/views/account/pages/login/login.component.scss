@@ -1,0 +1,53 @@
+.imagebienvenido {
+    width: 100%;
+    background-color: transparent;
+    width: 50%;
+    height: 40%;
+    display: flex;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.parent-cms {
+    background-image: url('src/assets/escritorio.jpg');
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.formulario {
+    border-radius: 1em;
+    display: flex;
+    margin-right: 15%;
+    padding: 20px;
+    height: 205px;
+    margin-top: auto;
+    align-items: center;
+    background-color: #ffffff7d;
+    margin-bottom: auto;
+}
+
+.form-group {
+    label {
+        font-size: 20px;
+    }
+}
+
+.parentflex {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media only screen and (max-width: 769px) {
+    .parentflex {
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        .formulario {
+            margin-top: 0px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

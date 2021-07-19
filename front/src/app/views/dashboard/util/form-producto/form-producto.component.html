@@ -1,0 +1,42 @@
+<div class="container">
+  <form novalidate [formGroup]="user" id="form-user">
+    <h1>Registrar Uusario</h1>
+    <div class="blockI">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="name">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Genero</mat-label>
+        <mat-select formControlName="gender">
+          <mat-option value="male">Masculino</mat-option>
+          <mat-option value="female">Femenino</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </div>
+
+    <div class="blockI">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Estado</mat-label>
+        <mat-select formControlName="status">
+          <mat-option value="active">activo</mat-option>
+          <mat-option value="inactive">inactivo</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Correo</mat-label>
+        <input matInput formControlName="email">
+      </mat-form-field>
+
+    </div>
+
+    <div class="enviar">
+      <button mat-button (click)='sendProduct()'>Guardar</button>
+    </div>
+  </form>
+</div>

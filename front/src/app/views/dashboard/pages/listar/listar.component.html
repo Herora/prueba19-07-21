@@ -1,0 +1,25 @@
+<div class="list">
+    <h1>Lista de Usuarios</h1>
+    <div class="tabl">
+        <div class="headerTable">
+            <div style="width: 25%;">Nombre</div>
+            <div style="width: 35%;">Correo</div>
+            <div style="width: 15%;">Genero</div>
+            <div style="width: 15%;">Estatus</div>
+            <div style="width: 10%;">Acciones</div>
+        </div>
+        <div class="fila" *ngFor="let item of dataSource">
+            <div style="width: 25%;">{{item.name}}</div>
+            <div style="width: 35%;">{{item.email}}</div>
+            <div style="width: 15%;">{{item.gender}}</div>
+            <div style="width: 15%;">{{item.status}}</div>
+            <div style="width: 10%;"><img src="../../../../../assets/icons8-eliminar.svg"/></div>
+        </div>
+
+        <div class="pagination" *ngIf="pagination!null">
+            <button type="button" (click)="search(pagination.links.previous)" [disabled]="previous == null">Anterior</button>
+            <p>{{pagination.page}}</p>
+            <button type="button" (click)="search(pagination.links.next)" [disabled]="next == null">Siguiente</button>
+        </div>
+    </div>
+</div>
