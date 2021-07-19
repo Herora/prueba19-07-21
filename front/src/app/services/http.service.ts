@@ -11,7 +11,7 @@ export class HttpService {
   
   httpOptions: { headers; observe; } = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/x-www-form-urlencoded',
+      'Content-Type': 'application/json',
       'Accept': 'application/json',
       'Authorization': 'Bearer f1ca1955ffb5af0ac55a26e918af03a7ae87c3e14214c6f1495fac11a755b2a4'
     }),
@@ -30,5 +30,8 @@ export class HttpService {
   }
   public getListUserPage(value) {
     return this.http.get(`${value}`);
+  }
+  public deleteUser(id) {
+    return this.http.delete(`${URL}/public/v1/users/${id}?access-token=${this.token}`);
   }
 }

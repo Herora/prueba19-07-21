@@ -36,4 +36,17 @@ export class ListarComponent implements OnInit {
       this.previous = res.meta.pagination.links.previous;
     });
   }
+  public eliminar(id){
+    if (confirm('desea eliminar ese Usuario ?')) {
+      this.servicios.deleteUser(id).subscribe((res: any) => {
+        if(res == null){
+          alert("Usuario eliminado exitosamente");
+          this.router.navigate(['/dashboard/registrar']);
+        }else{
+          alert("Comuniquese con administración");
+          this.router.navigate(['/dashboard/registrar']);
+        }
+      });
+    }
+  }
 }
